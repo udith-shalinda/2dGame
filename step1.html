@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	2D game
+	</title>
+	<style>
+	* {padding:0; margin:0; auto;}
+	
+	canvas { background: #eee; display: block; margin : 0; auto;}
+	
+	</style>
+	
+</head>
+
+<body>
+
+<canvas id = "myGame" width = "500" height = "500"></canvas>
+
+<script>
+
+var canvas = document.getElementById("myGame");
+var game2 = canvas.getContext("2d");
+
+game2.beginPath();
+game2.rect(20,40,50,50);
+game2.fillStyle = "green";
+game2.fill();
+game2.closePath();
+
+game2.beginPath();
+game2.arc(300, 300, 20, 0, Math.PI*2, false);
+game2.fillStyle = "red";
+game2.fill();
+game2.closePath();
+
+game2.beginPath();
+game2.rect(240, 160, 20, 40);
+game2.strokeStyle = "green";
+game2.stroke();
+game2.closePath();
+
+</script>
+
+</body>
+</html>
